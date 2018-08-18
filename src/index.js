@@ -79,10 +79,10 @@ export default class Headroom extends Component {
       this.props.parent().removeEventListener('scroll', this.handleScroll)
       this.props.parent().removeEventListener('resize', this.handleResize)
     } else if (!nextProps.disable && this.props.disable) {
-      this.props.parent().addEventListener('scroll', this.handleScroll)
+      nextProps.parent().addEventListener('scroll', this.handleScroll)
 
-      if (this.props.calcHeightOnResize) {
-        this.props.parent().addEventListener('resize', this.handleResize)
+      if (nextProps.calcHeightOnResize) {
+        nextProps.parent().addEventListener('resize', this.handleResize)
       }
     }
     this.classes = Object.assign({}, defaultClasses, nextProps.classes)
