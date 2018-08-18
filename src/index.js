@@ -295,7 +295,7 @@ export default class Headroom extends Component {
         OTransition: 'all .2s ease-in-out',
         transition: 'all .2s ease-in-out',
       }
-      className += ' headroom--scrolled'
+      className += ` ${this.classes.scrolled}`
     }
 
     if (!this.props.disableInlineStyles) {
